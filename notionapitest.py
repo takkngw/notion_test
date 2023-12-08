@@ -21,8 +21,6 @@ def read_notion_database(database_id):
             "database_id": database_id,
         }
     )
-
-
     return response
 
 a = read_notion_database('ede808c9-e27a-47a3-aa2f-ae6a2a03fa57')
