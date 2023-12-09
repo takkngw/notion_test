@@ -1,8 +1,9 @@
 import os
 from notion_client import Client
 import requests
+from keys import notion_keys
 
-NOTION_API_KEY = 'secret_HidOWMHEF8usYbCphDuuHOFM1aGxiWsOICaTTWcJWuZ'
+NOTION_API_KEY = notion_keys.NOTION_API_KEY
 
 url = f"https://api.notion.com/v1/search"
 

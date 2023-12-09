@@ -1,18 +1,19 @@
 import requests
 import datetime
+from keys import notion_keys
 
 dt_now = datetime.datetime.now()
 print(dt_now.strftime('%Y-%m-%d-T%H:%M:%SZ'))
 
 url = "https://api.notion.com/v1/pages"
 
-NOTION_API_KEY = 'secret_HidOWMHEF8usYbCphDuuHOFM1aGxiWsOICaTTWcJWuZ'
-DATABASE_ID = 'ede808c9e27a47a3aa2fae6a2a03fa57'
+# NOTION_API_KEY = 'secret_HidOWMHEF8usYbCphDuuHOFM1aGxiWsOICaTTWcJWuZ'
+# DATABASE_ID = 'ede808c9e27a47a3aa2fae6a2a03fa57'
 
 headers = {
     "accept": "application/json",
     "Notion-Version": "2022-06-28",
-    "Authorization": f"Bearer {NOTION_API_KEY}"
+    "Authorization": f"Bearer {notion_keys.NOTION_API_KEY}"
 }
 
 json_data = {
@@ -23,7 +24,7 @@ json_data = {
     },
     "parent": {
         "type": "database_id",
-        "database_id": f"{DATABASE_ID}"
+        "database_id": f"{notion_keys.DATABASE_ID}"
     },
     # プロパティ
     "properties": {
