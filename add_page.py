@@ -2,7 +2,7 @@ import requests
 import datetime
 from keys import notion_keys
 
-dt_now = datetime.datetime.now()
+dt_now = datetime.datetime.now().utcnow()
 print(dt_now.strftime('%Y-%m-%d-T%H:%M:%SZ'))
 
 url = "https://api.notion.com/v1/pages"
